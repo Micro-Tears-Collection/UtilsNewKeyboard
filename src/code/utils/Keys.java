@@ -108,12 +108,12 @@ public class Keys {
         
         if(pressedID == -1) return;
         
-        for(int i=pressedID; i<pressedCount-1; i++) {
-            pressed[i] = pressed[i+1];
-            pressedTime[i] = pressedTime[i+1];
-        }
-        
         pressedCount--;
+        
+        if(pressedCount >= 1) {
+            pressed[pressedID] = pressed[pressedCount];
+            pressedTime[pressedID] = pressedTime[pressedCount];
+        }
     }
     
     static long isPressedTime;

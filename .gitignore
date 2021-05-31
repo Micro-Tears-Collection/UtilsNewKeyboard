@@ -1,2 +1,3 @@
-/build/
-/dist/
+﻿nbproject/private
+dist
+build
